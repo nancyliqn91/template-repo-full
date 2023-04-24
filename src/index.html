@@ -1,0 +1,46 @@
+<html lang="en-US">
+<head>
+  <title>Bike API</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Search for a bike via the Bike Index API</h1>
+    <p>Type in any of the fields below to generate results, entering a location by city, a color, and/or if reported as stolen:</p>
+    <pre>
+      Portland
+      Black
+      all (includes all bikes, stolen or not)
+    </pre>
+    <form>
+      <label for="location">Enter a city (only works if "Proximity" button is selected): </label>
+      <input id="location" type="text" name="location">
+      <label for="color">Enter a color: </label>
+      <input id="color" type="text" name="color">
+      <br>
+      <br>
+      <label>Stolen <em>(choose one)</em>: </label>
+      <label> 
+        <input type="radio" name="stolenness" value="all" checked>
+        All
+      </label>
+      <label> 
+        <input type="radio" name="stolenness" value="non">
+        Non-stolen
+      </label>
+      <label> 
+        <input type="radio" name="stolenness" value="stolen">
+        Stolen
+      </label>
+      <label> 
+        <input type="radio" name="stolenness" value="proximity">
+        Proximity
+      </label>
+      <button type="submit" class="btn-success" id="bikeSearch">Search for your bike!</button>
+    </form>
+    <p id="showResponse"></p>
+    <div id="statistic"></div>
+    <div id="response"></div>
+    <button type="button" class="btn-success selector" id='2'>Next Page</button>
+  </div>
+</body>
+</html>
